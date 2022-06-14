@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* PAGINA: NOSOTROS */
+.barra {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a8a9ab), color-stop(42%, #c4c5c9), color-stop(90%, #dad8d8));
+  background-image: linear-gradient(to bottom, #a8a9ab 0%, #c4c5c9 42%, #dad8d8 90%);
+  min-height: 60px;
+}
+
+.barra .logo {
+  font-family: "Cinzel", serif;
+  font-size: 32px;
+  -webkit-animation: backInLeft;
+          animation: backInLeft;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+
+.barra .item {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f1f0f0;
+}
+
+/* Utilizacion de extends */
+.nosotros, .profesionales, .tecnologias, .ubicacion {
+  font-size: 25px;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.profesionales {
+  color: #431313;
+}
+
+.tecnologias {
+  color: #566573;
+}
+
+.ubicacion {
+  color: #20405f;
+}
+
+.descripcion {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 80px;
+  font-size: 18px;
+}
+
+.img {
+  padding: 0%;
+}
+
+.ubicacion p {
+  font-size: 15px;
+}
+
+iframe {
+  size: 60px;
+  margin-bottom: 23px;
+}
+
+/* PAGINA: TRATAMIENTOS */
+.btn-primary {
+  border-radius: 20px;
+  border: white solid 1px;
+  background-color: rgba(187, 200, 205, 0.936);
+}
+
+.btn-primary:hover {
+  background-color: rgba(213, 214, 216, 0.872);
+  border: white;
+}
+
+/* PAGINA: PROMOCIONES*/
+body {
+  background-color: #f1f0f0;
+}
+
+.headerPromociones {
+  -webkit-animation: bounceInDown;
+          animation: bounceInDown;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.subtituloPromociones {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border-bottom: solid 0.7px;
+}
+
+.card-promociones {
+  height: 250px;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  padding: 0%;
+}
+
+.card-promociones .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 10px;
+  -webkit-transition: .9s;
+  transition: .9s;
+}
+
+.card-promociones .front {
+  -webkit-transform: perspective(500px) rotateY(0deg);
+          transform: perspective(500px) rotateY(0deg);
+}
+
+/* Personalizacion de cards en su parte frontal */
+.premium {
+  background-color: #e3ecff;
+}
+
+.comfort {
+  background-color: #d1dfff;
+}
+
+.classic {
+  background-color: #dae5ff;
+}
+
+.pack-uno {
+  background-color: #e3ecff;
+}
+
+.pack-dos {
+  background-color: #d1dfff;
+}
+
+.pack-tres {
+  background-color: #dae5ff;
+}
+
+.pack-cuatro {
+  background-color: #e3ecff;
+}
+
+.card-promociones .front h3 {
+  font-size: 23px;
+  width: 100%;
+  height: 60px;
+  margin-top: 80px;
+  padding-top: 20px;
+  background-color: #bed2fe;
+  color: #0a1211;
+  text-align: center;
+}
+
+/* Cards en su parte reversa  */
+.card-promociones .back {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+  background-color: #0a1211;
+  color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  -webkit-box-shadow: 0 5px 10px #000;
+          box-shadow: 0 5px 10px #000;
+}
+
+.card-promociones .back h3 {
+  font-size: 23px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.card-promociones .back p {
+  letter-spacing: 0.5px;
+}
+
+.card-promociones .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 20px;
+  line-height: 20px;
+}
+
+.card-promociones .back .link a {
+  color: #f3f3f3;
+  padding: 5px;
+}
+
+/* Rotacion de cards */
+.card-promociones:hover .front {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+}
+
+.card-promociones:hover .back {
+  -webkit-transform: perspective(600px) rotateY(360deg);
+          transform: perspective(600px) rotateY(360deg);
+}
+
+/* Mas informacion de promociones */
+.info {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 600;
+}
+
+.info .proximasPromos {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 50px;
+}
+
+.info .otrosTratamientos {
+  font-size: 17px;
+}
+
+button {
+  background-color: #bed2fe;
+  border-radius: 5px;
+  border: solid #bed2fe;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #566573;
+}
+
+/* Creacion de un mapa*/
+.masaje-green {
+  background-color: green;
+  height: 200px;
+  width: 500px;
+  padding-top: 50px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+}
+
+.masaje-orange {
+  background-color: orange;
+  height: 200px;
+  width: 500px;
+  padding-top: 50px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+}
+
+.masaje-yellow {
+  background-color: yellow;
+  height: 200px;
+  width: 500px;
+  padding-top: 50px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+}
+
+.masaje-violet {
+  background-color: violet;
+  height: 200px;
+  width: 500px;
+  padding-top: 50px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+}
+
+/* PAGINA: GALERIA */
+/* PAGINA: CONTACTO */
+main h2 {
+  text-align: center;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 40px;
+  padding: 20px;
+}
+
+.formulario {
+  margin: 40px;
+  padding: 35px;
+  border: 2px;
+  width: 85%;
+}
+
+.formulario .formularioContenedor {
+  margin: 20px;
+  padding: 25px;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  background-color: #F7F9F9;
+}
+
+.datos {
+  width: 100%;
+  margin: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#boton {
+  width: 15%;
+  padding: 5px;
+  border-color: #B3B6B7;
+  border-radius: 20px;
+  background-color: #f2f4f2;
+}
+
+#boton:hover {
+  background-color: #B3B6B7;
+  cursor: pointer;
+}
+
+/* HEADER PARA TODAS MIS SECCIONES */
+/* Utilizacion de los mixins*/
+.headerTratamientos {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 40px;
+  background-color: #ff9dc2;
+}
+
+.headerPromociones {
+  font-family: "Cinzel", serif;
+  font-size: 25px;
+  background-color: #2ef6f6;
+}
+
+.headerGaleria {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 30px;
+  background-color: #2e60f6;
+}
+
+.headerContacto {
+  font-family: "Cinzel", serif;
+  font-size: 35px;
+  background-color: #06174c;
+}
+
+.headerTratamientos h1, .headerPromociones h1, .headerContacto h1, .headerGaleria h1 {
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  text-align: center;
+  color: white;
+  padding: 6px;
+}
+
+/* FOOTER PARA TODAS MIS SECCIONES */
+.footer {
+  padding-top: 15px;
+  min-height: 55px;
+  background-color: #d5d5d5;
+  letter-spacing: 15px;
+}
+
+.footer a {
+  color: #2b2b2b;
+}
+
+.footer a:hover {
+  color: #3a4a4a;
+}
+/*# sourceMappingURL=estilos.css.map */

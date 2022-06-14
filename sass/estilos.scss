@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$fuente1: 'Cinzel', serif;
+$fuente2: 'Zen Kaku Gothic Antique', sans-serif;
+
+$color1: #e3ecff;
+$color2: #d1dfff;
+$color3:#dae5ff;
+
+
+/* PAGINA: NOSOTROS */
+
+.barra{
+    background-image: linear-gradient(to bottom, #a8a9ab 0%, #c4c5c9 42%, #dad8d8 90%);;
+    min-height: 60px;
+    .logo{
+        font-family: $fuente1;
+        font-size: 32px;
+        animation: backInLeft;
+        animation-duration: 2.5s;
+    }
+    .item{
+        font-family: $fuente2;
+        font-size: 18px;
+        font-weight:500;
+    }
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+}
+
+.row{
+    font-family: $fuente2;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f1f0f0;
+}
+
+/* Utilizacion de extends */
+.nosotros{
+    font-size: 25px;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.profesionales{
+    @extend .nosotros;
+    color: rgb(67, 19, 19);
+}
+
+.tecnologias{
+    @extend .nosotros;
+    color: #566573;
+}
+
+.ubicacion{
+    @extend .nosotros;
+    color: #20405f;
+}
+
+.descripcion{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 80px;
+    font-size: 18px;
+}
+
+.img{
+    padding: 0%;
+}
+
+.ubicacion p{
+    font-size: 15px;
+}
+
+iframe{
+    size: 60px;
+    margin-bottom: 23px;
+}
+
+/* PAGINA: TRATAMIENTOS */
+
+.btn-primary{
+    border-radius: 20px;
+    border: white solid 1px;
+    background-color: rgba(187, 200, 205, 0.936);
+}
+
+.btn-primary:hover{
+    background-color: rgba(213, 214, 216, 0.872);
+    border: white
+}
+
+
+/* PAGINA: PROMOCIONES*/
+
+body{
+    background-color: #f1f0f0;
+}
+
+.headerPromociones{
+    animation: bounceInDown;
+    animation-duration: 1.5s;
+}
+
+.subtituloPromociones{
+    font-family: $fuente2;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-bottom: solid 0.7px;
+}
+
+
+
+.card-promociones{
+    height: 250px;
+    font-family: $fuente2;
+    padding: 0%;
+}
+
+.card-promociones{    
+    .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    transition: .9s;
+    }
+}
+
+.card-promociones{
+    .front{
+    transform:perspective(500px) rotateY(0deg);
+    }
+}
+
+/* Personalizacion de cards en su parte frontal */
+.premium{
+    background-color: $color1;
+}
+
+.comfort{
+    background-color: $color2;
+}
+
+.classic{
+    background-color: $color3;
+}
+.pack-uno{
+    background-color: $color1;
+}
+
+.pack-dos{
+    background-color: $color2;
+}
+
+.pack-tres{
+    background-color: $color3;
+}
+
+.pack-cuatro{
+    background-color: $color1;
+}
+
+.card-promociones .front h3{
+    font-size: 23px;
+    width: 100%;
+    height: 60px;
+    margin-top: 80px;
+    padding-top: 20px;
+    background-color: #bed2fe;
+    color: #0a1211;
+    text-align: center;
+}
+
+/* Cards en su parte reversa  */
+.card-promociones .back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #0a1211;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card-promociones .back h3{
+    font-size: 23px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.card-promociones .back p{
+    letter-spacing: 0.5px;
+}
+
+.card-promociones .back .link{
+    border-top: solid 1px #f3f3f3;
+    height: 20px;
+    line-height: 20px;
+}
+
+.card-promociones .back .link a{
+    color: #f3f3f3;
+    padding: 5px;
+}
+
+/* Rotacion de cards */
+.card-promociones:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card-promociones:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+/* Mas informacion de promociones */
+
+.info{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: 600;
+    .proximasPromos{
+        font-size: 20px;
+        font-weight: 600;
+        margin: 50px;
+    }
+    
+    .otrosTratamientos{
+        font-size: 17px;
+    }
+}
+
+button{
+    background-color: #bed2fe;
+    border-radius: 5px;
+    border: solid #bed2fe;
+    padding: 3px;
+    margin-bottom: 20px;
+    &:hover{
+        background-color: #566573;
+    }
+}
+
+    /* Creacion de un mapa*/
+
+$cards1: (
+    10px: green,
+    15px: orange,
+    20px: yellow,
+    25px: violet,
+    );
+
+    @each $sizes, $colors in $cards1 {
+        .masaje-#{$colors} {
+            background-color: $colors;
+            height: 200px;
+            width: 500px;
+            padding-top: 50px;
+            text-align: center;
+            font-family: $fuente2;
+            font-size: 25px;
+            font-weight: bolder;
+            color: white;
+
+        }
+    }   
+
+/* PAGINA: GALERIA */
+
+/* PAGINA: CONTACTO */
+
+main{
+    h2{
+    text-align: center;
+    font-family: $fuente2;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 40px;
+    padding: 20px;
+    }
+}
+
+.formulario{
+    margin: 40px;
+    padding: 35px;
+    border: 2px;
+    width: 85%;
+    .formularioContenedor{
+        margin: 20px;
+        padding: 25px;
+        font-family: $fuente2;
+        font-size: 18px;
+        font-weight: bolder;
+        background-color: #F7F9F9;
+    }
+}
+
+.datos{
+    width: 100%;
+    margin:5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#boton{
+    width: 15%;
+    padding: 5px;
+    border-color: #B3B6B7 ;
+    border-radius: 20px;
+    background-color: #f2f4f2
+}
+
+#boton:hover{
+    background-color: #B3B6B7 ;
+    cursor: pointer;
+}
+
+
+/* HEADER PARA TODAS MIS SECCIONES */
+
+    /* Utilizacion de los mixins*/
+
+    @mixin sizes ($font , $fsize , $color){
+        font-family: $font;
+        font-size: $fsize;
+        background-color: $color;
+    }
+
+    .headerTratamientos{
+        @include sizes ($fuente2, 40px, rgb(255, 157, 194))
+    }
+    .headerPromociones{
+        @include sizes ($fuente1, 25px, rgb(46, 246, 246))
+            
+    }
+
+    .headerGaleria{
+        @include sizes ($fuente2, 30px, rgb(46, 96, 246))
+    }
+
+    .headerContacto{
+        @include sizes ($fuente1, 35px, rgb(6, 23, 76))
+    }
+.headerTratamientos, .headerPromociones, .headerContacto, .headerGaleria{ 
+    h1{
+        font-family: $fuente1;
+        font-size: 28px;
+        font-weight: 200;
+        letter-spacing: 3px;
+        text-align: center;
+        color: white;
+        padding: 6px;
+    }
+}
+
+/* FOOTER PARA TODAS MIS SECCIONES */
+.footer{
+    padding-top: 15px;
+    min-height: 55px;
+    background-color: #d5d5d5;
+    letter-spacing: 15px;
+}
+
+.footer a{
+    color: rgb(43, 43, 43)
+}
+
+.footer a:hover{
+    color:rgb(58, 74, 74)
+}
